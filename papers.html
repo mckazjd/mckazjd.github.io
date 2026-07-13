@@ -17,11 +17,11 @@
   
   <nav>
     <ul>
-    <a href="https://jvvi7nmn.html2web.com" target="_blank">主页</a>
-    <a href="https://e74tu6fx.html2web.com" target="_blank">日记</a>
-    <a href="https://0nuk3kd1.html2web.com" target="_blank">小说</a>
-    <a href="https://t68urlsn.html2web.com" target="_blank">意见</a>
-    <a href="https://ccd7856c.pinme.dev/#/r/v14SwY60XJ58MHHi3kGruC0Nlqrvx5RkC4-_z6b0Qrw" target="_blank">公共聊天区</a>
+    <a href="mcfan.cc.cd" target="_blank">主页</a>
+    <a href="papers.html" target="_blank">日记</a>
+    <a href="dayli.html" target="_blank">小说</a>
+    <a href="join.html" target="_blank">意见</a>
+    <a href="chat.html" target="_blank">公共聊天区</a>
     </ul>
   </nav>
   
@@ -46,7 +46,7 @@
  <script>
     const papers = [
       `&emsp;&emsp;等了好久，IMC的多人联机功能又好了，不知道为什么，有时候会突然不能用，但在别的地区能用。翻了一下列表，大部分都是生存和PVP，由于是手机版，pvp不好打,生存我又觉得不好玩，这时，一个叫so easy的标题吸引了我,so easy?能有多easy?进去一看,果然是个跑酷,手机玩跑酷有天生的优势,开始都挺简单的,给我开心的不停在聊天群里发so easy,结果一会就打脸了。被一个旋转跳难住了,头顶还有个石头,只好叫房主来帮忙了，房主叫food,后来我们就一起跑酷了,很多关卡都跳过了,那个旋转跳实在是过不去,班实力有限，最后终于到终点了，我们坐上了矿车，浏览了一遍地图，跑了我两个小时(°ー°〃)。<br>&emsp;&emsp;后来他就把我拉去了他的另一个服，是一个创造世界，他在里面建了一个召唤him的东西，我开个玩笑说了句:him来了！结果刚说完，真有一个叫HIM的玩家加入了，说了句hi,我俩都搁那蒙了半天,他说:"还能这么玩？"我又开始做末地传送门,做好之后把传送方块拆的只剩一个，再把周围围上，就做成了一个只有一格的末地传送门，还搞了一个天堂传送门和一个暮色传送门，当然都是假的（除了那个召唤HIM的qwq）<br>&emsp;&emsp;我用沙子搭了一个陷阱，但是太假了，于是我又弄了个商店，在商店门前用告示牌弄了个坑，上面铺上了地毯，接着跟全服人说:"来我这商店买东西的有福利"好多人来了都没发现门口的地毯有什么问题,然后我在商店内部把告示牌一拆,人全掉下去了qwq,就这样成全服公敌了,后来我就退了(我还发现了怎么发变色字体的方法:在聊天栏里输&+任意数字+要发的字,还有如何私信一个人:/tell 玩家名 内容)。`,
-      `&emsp;&emsp;今天进了一个叫钻石大陆的服务器，开始挖了好多钻石，换了一把钻镐，然后又买了效率5，时运3，这时屏幕上突然显示某个坐标有大奖，可我是手机，看不清具体坐标，只看得见x坐标，我就在z坐标的一个方向跑,找到一个村庄,什么也没发现,然后被僵尸打死了,回到主城,我用钻石兑换钻石块,32个钻石换一个钻块，太坑了(。_。)，但货币就是钻块，没办法。我突然想到了村庄，村庄里有工作台，刚准备去，服主帮我叫了过去，送了我一把效率10，时运5的钻镐，随后我跑到了村庄，先挖了9组钻石，然后全合成钻块。买了一个钻剑，再合成了钻石装备，服主还惊讶我怎么挖那么快😂`,
+      `&emsp;&emsp;今天进了一个叫钻石大陆的服务器，开始挖了好多钻石，换了一把钻镐，然后又买了效率5，时运3，这时屏幕上突然显示某个坐标有大奖，可我是手机，看不清具体坐标，只看得见x坐标，我就在z坐标的一个方向跑,找到一个村庄,什么也没发现,然后被僵尸打死了,回到主城,我用钻石兑换钻石块,32个钻石换一个钻块，太坑了(。_。)，但货币就是钻块，没办法。我突然想到了村庄，村庄里有工作台，刚准备去，服主帮我叫了过去，送了我一把效率10，时运5的钻镐，随后我跑到了村庄，先挖了9组钻石，然后全合成钻块。买了一个钻剑，再合成了钻石装备，服主还惊讶我怎么挖那么快😂<br>&emsp;&emsp;又遇到food的服了，不过他的服已经被人炸的不成样子了，他向我抱怨了一句就关服了<br>&emsp;&emsp;后来进了一个叫ren的chu人创建的PVP服，里面有个跑酷，不知道今天怎么了，一遍就过了😮，他邀请我做管理员，但他一直弄不好命令方块，最终也没当上管理员。`,
       `敬请期待。`,
       `敬请期待。`
     ];
@@ -66,6 +66,15 @@
       curr.textContent = page + 1;
       prev.disabled = page === 0;
       next.disabled = page === papers.length - 1;
+    }
+    
+    prev.addEventListener('click', () => { if(page>0) { page--; update(); } });
+    next.addEventListener('click', () => { if(page<papers.length-1) { page++; update(); } });
+    
+    update();
+</script>
+</body>
+</html>      next.disabled = page === papers.length - 1;
     }
     
     prev.addEventListener('click', () => { if(page>0) { page--; update(); } });
