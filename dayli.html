@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MC༒狂爱者基地 | 小说</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}body{font-family:"Microsoft YaHei",sans-serif;background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 100%);color:#2d3748;line-height:1.6}header{background:linear-gradient(90deg,#064e3b,#047857);color:white;text-align:center;padding:2.5rem 1.5rem;box-shadow:0 4px 12px rgba(0,0,0,0.1)}h1{font-size:2.8rem;margin:15px 0}nav{background:white;box-shadow:0 2px 15px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100}nav ul{display:flex;justify-content:center;list-style:none;padding:12px 0;max-width:1200px;margin:0 auto}nav li{margin:0 8px}nav a{display:block;padding:8px 22px;border-radius:30px;text-decoration:none;color:#2c5282;font-weight:500;transition:all 0.3s;border:1px solid transparent}nav a:hover{background:#f0f7ff;border-color:#4a6fa5}nav a.active{background:linear-gradient(to bottom,#4a6fa5,#3a5a80);color:white;border-color:#3a5a80;box-shadow:0 4px 10px rgba(74,111,165,0.3)}.container{max-width:900px;margin:40px auto;padding:0 20px}.content-box{background:linear-gradient(145deg,#ffffff,#f8fff9);border-left:4px solid #047857;border-radius:0 10px 10px 0;padding:30px;margin:25px 0;box-shadow:0 5px 15px rgba(0,0,0,0.05)}.section-title{color:#064e3b;text-align:center;font-size:2.2rem;margin:25px 0 15px}.subtitle{color:#047857;text-align:center;font-size:1.4rem;margin-bottom:25px}h2{color:#065647;margin:22px 0 15px;font-size:1.7rem;border-left:3px solid #047857;padding-left:12px}.pagination{display:flex;justify-content:center;gap:15px;margin:25px 0}.pagination button{padding:9px 25px;background:linear-gradient(to bottom,#064e3b,#047857);color:white;border:none;border-radius:30px;font-size:1.05rem;cursor:pointer;transition:all 0.3s;display:flex;align-items:center;gap:6px}.pagination button:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 10px rgba(6,78,59,0.4)}.pagination button:disabled{background:#cbd5e1;cursor:not-allowed;opacity:0.7}.page-info{text-align:center;color:#4a5568;font-weight:500;margin-top:10px}footer{text-align:center;padding:25px;color:#4a5568;background:rgba(255,255,255,0.8);border-top:1px solid #e2e8f0;margin-top:20px;font-size:1.05rem}@media (max-width:768px){nav ul{flex-wrap:wrap}nav li{margin:5px}h1{font-size:2.3rem}.subtitle{font-size:1.2rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>小说</h1>
+    <p style="font-size:1.4rem;opacity:0.9">敬请期待</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <a href="mcfan.cc.cd" target="_blank">主页</a>
+    <a href="papers.html" target="_blank">日记</a>
+    <a href="dayli.html" target="_blank">小说</a>
+    <a href="join.html" target="_blank">意见</a>
+    <a href="chat.html" target="_blank">公共聊天区</a>
+    </ul>
+  </nav>
+  
+  <div class="container">
+    <h2 class="section-title">敬请期待</h2>
+    <h3 class="subtitle">敬请期待</h3>
+    <div class="content-box">
+      <h2 id="daily-title">敬请期待</h2>
+      <h3 id="daily-text">敬请期待</h3>
+    </div>
+    
+    <div class="pagination">
+      <button id="prev-btn" disabled><i class="fas fa-arrow-left"></i> 上一页</button>
+      <button id="next-btn">下一页 <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="page-info">第 <span id="current-page">1</span> 页 / 共 2 页</div>
+  </div>
+  
+  <footer>
+    <p>© MC༒狂爱者基地 编辑于2026年5月24日</p>
+  </footer>
+
+  <script>
+    const dailyPages = [
+      {title: "敬请期待", content: "敬请期待"},
+      {title: "敬请期待", content: "敬请期待"}
+    ];
+    
+    let page = 0;
+    const titleEl = document.getElementById('daily-title');
+    const textEl = document.getElementById('daily-text');
+    const prev = document.getElementById('prev-btn');
+    const next = document.getElementById('next-btn');
+    const curr = document.getElementById('current-page');
+    
+    function update() {
+      titleEl.textContent = dailyPages[page].title;
+      textEl.textContent = dailyPages[page].content;
+      curr.textContent = page + 1;
+      prev.disabled = page === 0;
+      next.disabled = page === dailyPages.length - 1;
+    }
+    
+    prev.addEventListener('click', () => { if(page>0) { page--; update(); } });
+    next.addEventListener('click', () => { if(page<dailyPages.length-1) { page++; update(); } });
+    
+    update();
+  </script>
+</body>
+</html>
